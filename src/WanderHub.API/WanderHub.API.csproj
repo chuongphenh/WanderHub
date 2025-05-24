@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WanderHub.Contract\WanderHub.Contract.csproj" />
+    <ProjectReference Include="..\WanderHub.Domain\WanderHub.Domain.csproj" />
+    <ProjectReference Include="..\WanderHub.Infrastructure\WanderHub.Infrastructure.csproj" />
+    <ProjectReference Include="..\WanderHub.Persistence\WanderHub.Persistence.csproj" />
+    <ProjectReference Include="..\WanderHub.Presentation\WanderHub.Presentation.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36109.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WanderHub.API", "src\WanderHub.API\WanderHub.API.csproj", "{EFD906A6-5224-14E5-6651-0B01BD63703E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WanderHub.Application", "src\WanderHub.Application\WanderHub.Application.csproj", "{FBDDDF0C-8069-38CD-5FD4-DF5903A2F78C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{12549F05-C2F9-407B-8429-DFF8CE08FCE7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{50ADDCAE-4936-4251-9B5D-EC280606FC62}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WanderHub.Contract", "src\WanderHub.Contract\WanderHub.Contract.csproj", "{0EE33A4D-09F6-C39C-4F13-6B331FA03B87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WanderHub.Domain", "src\WanderHub.Domain\WanderHub.Domain.csproj", "{7121CDAB-CCDC-40EB-CB5F-B1A4ACB12865}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WanderHub.Infrastructure", "src\WanderHub.Infrastructure\WanderHub.Infrastructure.csproj", "{A89A8122-604E-8D4F-18D5-F89C7F5A0AC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WanderHub.Persistence", "src\WanderHub.Persistence\WanderHub.Persistence.csproj", "{89141505-39D3-C8BC-710A-C0E7F27DE45E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WanderHub.Presentation", "src\WanderHub.Presentation\WanderHub.Presentation.csproj", "{CBB3B5E4-FADE-149F-2F4D-D60CEC39304F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WanderHub.Architecture.Tests", "test\WanderHub.Architecture.Tests\WanderHub.Architecture.Tests.csproj", "{4436D21A-F9D9-4382-955A-404E18B4B896}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFD906A6-5224-14E5-6651-0B01BD63703E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFD906A6-5224-14E5-6651-0B01BD63703E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFD906A6-5224-14E5-6651-0B01BD63703E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFD906A6-5224-14E5-6651-0B01BD63703E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBDDDF0C-8069-38CD-5FD4-DF5903A2F78C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBDDDF0C-8069-38CD-5FD4-DF5903A2F78C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBDDDF0C-8069-38CD-5FD4-DF5903A2F78C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBDDDF0C-8069-38CD-5FD4-DF5903A2F78C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EE33A4D-09F6-C39C-4F13-6B331FA03B87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EE33A4D-09F6-C39C-4F13-6B331FA03B87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EE33A4D-09F6-C39C-4F13-6B331FA03B87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EE33A4D-09F6-C39C-4F13-6B331FA03B87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7121CDAB-CCDC-40EB-CB5F-B1A4ACB12865}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7121CDAB-CCDC-40EB-CB5F-B1A4ACB12865}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7121CDAB-CCDC-40EB-CB5F-B1A4ACB12865}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7121CDAB-CCDC-40EB-CB5F-B1A4ACB12865}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A89A8122-604E-8D4F-18D5-F89C7F5A0AC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A89A8122-604E-8D4F-18D5-F89C7F5A0AC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A89A8122-604E-8D4F-18D5-F89C7F5A0AC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A89A8122-604E-8D4F-18D5-F89C7F5A0AC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89141505-39D3-C8BC-710A-C0E7F27DE45E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89141505-39D3-C8BC-710A-C0E7F27DE45E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89141505-39D3-C8BC-710A-C0E7F27DE45E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89141505-39D3-C8BC-710A-C0E7F27DE45E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBB3B5E4-FADE-149F-2F4D-D60CEC39304F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBB3B5E4-FADE-149F-2F4D-D60CEC39304F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBB3B5E4-FADE-149F-2F4D-D60CEC39304F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBB3B5E4-FADE-149F-2F4D-D60CEC39304F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4436D21A-F9D9-4382-955A-404E18B4B896}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4436D21A-F9D9-4382-955A-404E18B4B896}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4436D21A-F9D9-4382-955A-404E18B4B896}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4436D21A-F9D9-4382-955A-404E18B4B896}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EFD906A6-5224-14E5-6651-0B01BD63703E} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{FBDDDF0C-8069-38CD-5FD4-DF5903A2F78C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{0EE33A4D-09F6-C39C-4F13-6B331FA03B87} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{7121CDAB-CCDC-40EB-CB5F-B1A4ACB12865} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{A89A8122-604E-8D4F-18D5-F89C7F5A0AC9} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{89141505-39D3-C8BC-710A-C0E7F27DE45E} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{CBB3B5E4-FADE-149F-2F4D-D60CEC39304F} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{4436D21A-F9D9-4382-955A-404E18B4B896} = {12549F05-C2F9-407B-8429-DFF8CE08FCE7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {422C3105-86F7-4991-8615-9F81B8AAC17F}
+	EndGlobalSection
+EndGlobal
