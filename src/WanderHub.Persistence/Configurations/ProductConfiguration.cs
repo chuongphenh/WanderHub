@@ -1,7 +1,7 @@
-﻿using WanderHub.Domain.Entities;
-using WanderHub.Persistence.Constants;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using WanderHub.Domain.Entities;
+using WanderHub.Persistence.Constants;
 
 namespace WanderHub.Persistence.Configurations;
 

@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace WanderHub.Contract.Service.V1.Product.Validators;
+namespace WanderHub.Contract.Services.V1.Product.Validators;
 public class GetProductByIdValidator : AbstractValidator<Query.GetProductByIdQuery>
 {
     public GetProductByIdValidator()

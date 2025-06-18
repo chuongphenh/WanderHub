@@ -9,17 +9,17 @@
   <ItemGroup>
     <ProjectReference Include="..\WanderHub.Contract\WanderHub.Contract.csproj" />
     <ProjectReference Include="..\WanderHub.Domain\WanderHub.Domain.csproj" />
+    <ProjectReference Include="..\WanderHub.Persistence\WanderHub.Persistence.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Abstractions\" />
     <Folder Include="DependencyInjection\Options\" />
-    <Folder Include="Usecases\V1\Commands\Product\" />
     <Folder Include="Usecases\V1\Queries\" />
     <Folder Include="Usecases\V2\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="14.0.0" />
     <PackageReference Include="FluentValidation" Version="12.0.0" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.0.0" />
     <PackageReference Include="MediatR" Version="12.5.0" />

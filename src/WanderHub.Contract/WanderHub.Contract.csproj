@@ -7,13 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Ardalis.SmartEnum" Version="8.2.0" />
     <PackageReference Include="FluentValidation" Version="12.0.0" />
+    <PackageReference Include="MassTransit" Version="8.4.1" />
     <PackageReference Include="MediatR" Version="12.5.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.6" />
+    <PackageReference Include="MongoDB.Bson" Version="3.4.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Service\V2\" />
+    <Folder Include="Services\V2\" />
   </ItemGroup>
 
 </Project>

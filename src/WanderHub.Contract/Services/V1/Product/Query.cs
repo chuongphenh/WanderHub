@@ -1,7 +1,7 @@
 ﻿using WanderHub.Contract.Abstractions.Message;
-using static WanderHub.Contract.Service.V1.Product.Response;
+using static WanderHub.Contract.Services.V1.Product.Response;
 
-namespace WanderHub.Contract.Service.V1.Product;
+namespace WanderHub.Contract.Services.V1.Product;
 public static class Query
 {
    // public record GetProductsQuery(string? SearchTerm, string? SortColumn, SortOrder? SortOrder, IDictionary<string, SortOrder>? SortColumnAndOrder, int PageIndex, int PageSize) : IQuery<PagedResult<ProductResponse>>;

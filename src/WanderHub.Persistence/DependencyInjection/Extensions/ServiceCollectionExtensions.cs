@@ -3,8 +3,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using WanderHub.Domain.Abstractions;
+using WanderHub.Domain.Abstractions.Repositories;
 using WanderHub.Domain.Entities.Identity;
 using WanderHub.Persistence.DependencyInjection.Options;
+using WanderHub.Persistence.Interceptors;
+using WanderHub.Persistence.Repositories;
 
 namespace WanderHub.Persistence.DependencyInjection.Extensions;
 public static class ServiceCollectionExtensions
@@ -13,6 +17,10 @@ public static class ServiceCollectionExtensions
     {
         services.AddDbContextPool<DbContext, ApplicationDbContext>((provider, builder) =>
         {
+            // Interceptor
+            var outboxInterceptor = provider.GetService<ConvertDomainEventsToOutboxMessagesInterceptor>();
+            var auditableInterceptor = provider.GetService<UpdateAuditableEntitiesInterceptor>();
+
             var configuration = provider.GetRequiredService<IConfiguration>();
             var options = provider.GetRequiredService<IOptionsMonitor<SqlServerRetryOptions>>();
 
@@ -23,7 +31,7 @@ public static class ServiceCollectionExtensions
             .EnableSensitiveDataLogging(true)
             .UseLazyLoadingProxies(true) // => If UseLazyLoadingProxies, all of the navigation fields should be VIRTUAL
             .UseSqlServer(
-                connectionString: configuration.GetConnectionString("ConnectionStrings"),
+                connectionString: configuration.GetConnectionString("DefaultConnection"),
                 sqlServerOptionsAction: optionsBuilder
                         => optionsBuilder.ExecutionStrategy(
                                 dependencies => new SqlServerRetryingExecutionStrategy(
@@ -31,7 +39,8 @@ public static class ServiceCollectionExtensions
                                     maxRetryCount: options.CurrentValue.MaxRetryCount,
                                     maxRetryDelay: options.CurrentValue.MaxRetryDelay,
                                     errorNumbersToAdd: options.CurrentValue.ErrorNumbersToAdd))
-                            .MigrationsAssembly(typeof(ApplicationDbContext).Assembly.GetName().Name));
+                            .MigrationsAssembly(typeof(ApplicationDbContext).Assembly.GetName().Name))
+            .AddInterceptors(outboxInterceptor, auditableInterceptor);
 
             #endregion ============== SQL-SERVER-STRATEGY-1 ==============
 
@@ -72,6 +81,22 @@ public static class ServiceCollectionExtensions
             options.Password.RequiredUniqueChars = 1;
             options.Lockout.AllowedForNewUsers = true;
         });
+    }
+
+    public static void AddInterceptorPersistence(this IServiceCollection services)
+    {
+        services.AddSingleton<ConvertDomainEventsToOutboxMessagesInterceptor>();
+        services.AddSingleton<UpdateAuditableEntitiesInterceptor>();
+    }
+
+    public static void AddRepositoryPersistence(this IServiceCollection services)
+    {
+        services.AddTransient(typeof(IUnitOfWork), typeof(EFUnitOfWork));
+        services.AddTransient(typeof(IRepositoryBase<,>), typeof(RepositoryBase<,>));
+
+        services.AddTransient(typeof(IUnitOfWorkDbContext<>), typeof(EFUnitOfWorkDbContext<>));
+        services.AddTransient(typeof(IRepositoryBaseDbContext<,,>), typeof(RepositoryBaseDbContext<,,>));
+
     }
 
     public static OptionsBuilder<SqlServerRetryOptions> ConfigureSqlServerRetryOptionsPersistence(this IServiceCollection services, IConfigurationSection section)

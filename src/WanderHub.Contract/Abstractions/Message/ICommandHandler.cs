@@ -2,13 +2,10 @@
 using WanderHub.Contract.Shared;
 
 namespace WanderHub.Contract.Abstractions.Message;
-public interface ICommandHandler<TCommand> : IRequestHandler<ICommand, Result>
+public interface ICommandHandler<TCommand> : IRequestHandler<TCommand, Result>
     where TCommand : ICommand
-{
-}
+{ }
 
 public interface ICommandHandler<TCommand, TResponse> : IRequestHandler<TCommand, Result<TResponse>>
     where TCommand : ICommand<TResponse>
-{
-}
-
+{ }

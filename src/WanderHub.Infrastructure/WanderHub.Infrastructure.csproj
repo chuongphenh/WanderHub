@@ -11,4 +11,9 @@
     <ProjectReference Include="..\WanderHub.Domain\WanderHub.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DependencyInjection\Extensions\" />
+    <Folder Include="Caching\" />
+  </ItemGroup>
+
 </Project>

@@ -7,8 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WanderHub.Application\WanderHub.Application.csproj" />
-    <ProjectReference Include="..\WanderHub.Infrastructure\WanderHub.Infrastructure.csproj" />
+    <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="8.1.0" />
+    <PackageReference Include="Carter" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="APIs\Identity\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WanderHub.Contract\WanderHub.Contract.csproj" />
   </ItemGroup>
 
 </Project>

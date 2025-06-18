@@ -2,6 +2,7 @@
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using WanderHub.Application.Behaviors;
+using WanderHub.Application.Mapper;
 
 namespace WanderHub.Application.DependencyInjection.Extensions;
 public static class ServiceCollectionExtensions
@@ -15,4 +16,6 @@ public static class ServiceCollectionExtensions
         .AddTransient(typeof(IPipelineBehavior<,>), typeof(TransactionPipelineBehavior<,>))
         //.AddTransient(typeof(IPipelineBehavior<,>), typeof(TracingPipelineBehavior<,>))
         .AddValidatorsFromAssembly( Contract.AssemblyReference.Assembly, includeInternalTypes: true);
+    public static IServiceCollection AddAutoMapperApplication(this IServiceCollection services)
+        => services.AddAutoMapper(typeof(ServiceProfile));
 }

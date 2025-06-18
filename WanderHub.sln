@@ -14,7 +14,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{50ADDCAE-4936-4251-9B5D-EC280606FC62}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
-		Directory.Build.props = Directory.Build.props
+		docker-compose.Dev.Infrastructure.yaml = docker-compose.Dev.Infrastructure.yaml
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WanderHub.Contract", "src\WanderHub.Contract\WanderHub.Contract.csproj", "{0EE33A4D-09F6-C39C-4F13-6B331FA03B87}"
@@ -28,6 +29,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WanderHub.Presentation", "src\WanderHub.Presentation\WanderHub.Presentation.csproj", "{CBB3B5E4-FADE-149F-2F4D-D60CEC39304F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WanderHub.Architecture.Tests", "test\WanderHub.Architecture.Tests\WanderHub.Architecture.Tests.csproj", "{4436D21A-F9D9-4382-955A-404E18B4B896}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WanderHub.Infrastructure.MessageBus", "Infrastructure.MessageBus\WanderHub.Infrastructure.MessageBus.csproj", "{1F47F01D-32EB-4AEF-8F56-4BECDB672C2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +70,10 @@ Global
 		{4436D21A-F9D9-4382-955A-404E18B4B896}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4436D21A-F9D9-4382-955A-404E18B4B896}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4436D21A-F9D9-4382-955A-404E18B4B896}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F47F01D-32EB-4AEF-8F56-4BECDB672C2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F47F01D-32EB-4AEF-8F56-4BECDB672C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F47F01D-32EB-4AEF-8F56-4BECDB672C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F47F01D-32EB-4AEF-8F56-4BECDB672C2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,6 +87,7 @@ Global
 		{89141505-39D3-C8BC-710A-C0E7F27DE45E} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{CBB3B5E4-FADE-149F-2F4D-D60CEC39304F} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{4436D21A-F9D9-4382-955A-404E18B4B896} = {12549F05-C2F9-407B-8429-DFF8CE08FCE7}
+		{1F47F01D-32EB-4AEF-8F56-4BECDB672C2A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {422C3105-86F7-4991-8615-9F81B8AAC17F}

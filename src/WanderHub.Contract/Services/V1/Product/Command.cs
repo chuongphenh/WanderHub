@@ -1,6 +1,6 @@
 ﻿using WanderHub.Contract.Abstractions.Message;
 
-namespace WanderHub.Contract.Service.V1.Product;
+namespace WanderHub.Contract.Services.V1.Product;
 public static class Command
 {
     public record CreateProductCommand(string Name, decimal Price, string Description) : ICommand;
